@@ -9,7 +9,23 @@
     <body>
     
         <div id="root"></div>
-        <script src="index.js" type= "text/babel"></script>
+        <script src="index.js" type="text/babel"></script>
+    </body>
+</html>
+
+ANOTHER WAY TO SET UP REACT IN JAVASCRIPT
+
+import React from "react"
+import ReactDOM from "react-dom"
+
+<html>
+    <head>
+        <link rel="stylesheet" href="index.css">
+    </head>
+    <body>
+    
+        <div id="root"></div>
+        <script src="index.pack.js" ></script>
     </body>
 </html>
 
@@ -37,3 +53,81 @@ function MainContent(){
 ReactDOM.render(
 <MainContent />,
 document.getElementById('root'))
+
+
+ADDING A CLASSNAME: 
+ReactDOM.render(<h1 className="header">blablabla</h1>,document.getElementById('root'))
+
+
+YOU CAN SAVE ELEMENTS AS VARIABLES IN JSX (language used by react) 
+FOR EXAMPLE--> const page =( 
+            <div> 
+                <h1 className="header">aaa</h1>
+                <p>eee</p>
+            </div>
+            )
+
+                ReactDOM.render(
+                    page ,
+                    document.getElementById("root")
+                )
+SECOND EXAMPLE:
+
+const navBar = (
+    <nav>
+        <h1>website name so cool</h1>
+        <ul>
+            <li>Pricing</li>
+            <li>About</li>
+            <li>Contact</li>
+        </ul>
+    </nav>
+)
+
+ReactDOM.render(navBar, document.getElementById('root'))
+
+-----------REACT VS .APPEND-----------------------------
+const fourEl = (
+    <div>
+        <h1>My awesome website in React</h1>
+        <h3>Reasons why I love React</h3>
+        <nav>
+            <ol>
+                <li>It's composable</li>
+                <li>It's declarative</li>
+                <li>It's a hireable skill</li>
+                <li>It's actively maintained by skilled people</li>
+            </ol>
+        </nav>
+    </div>
+    
+    
+)
+
+ReactDOM.render(fourEl, document.getElementById('root'))
+
+
+--------------LETS START THE PROJECT--------------------
+import React from "react"
+import ReactDOM from "react-dom"
+
+const pageReact = (
+    <div>
+        <img src="react-logo.png" alt="react logo" width="30px" height="30px"/>
+        <h1>Fun facts about React</h1>
+        <ul>
+            <li>Was first released in 2013</li>
+            <li>Was originally created by Jordan Walke</li>
+            <li>Has well over 100K stars on GitHub</li>
+            <li>Is maintained by Facebook</li>
+            <li>Powers thousands of enterprise apps, including mobile apps</li>
+        </ul>   
+    </div>
+    
+)
+
+ReactDOM.render(pageReact, document.getElementById('root'))
+
+
+
+
