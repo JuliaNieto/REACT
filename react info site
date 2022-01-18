@@ -30,11 +30,6 @@ import ReactDOM from "react-dom"
 </html>
 
 
-------------------CSS-----------------------------------
-html, body {
-    margin: 0;
-    padding: 0;
-}
 
 
 ----------------JS-----------------------
@@ -151,18 +146,18 @@ ReactDOM.render( <TemporaryName />, document.getElementById("root"))
 PARENT CHILD COMPONENTS
 import React from "react"
 import ReactDOM from "react-dom"
-
-/**
-Mini Challenge:
-Move the `header` element from Page into 
-its own component called "Header"
-*/
+import Header from "./Header.js"
 
 function Header() {
     return (
         <header>
             <nav>
-                <img src="./react-logo.png" width="40px" />
+                <img src="./react-logo.png" width="40px" class="image" />
+                <ul className="nav-items">
+                    <li>Pricing</li>
+                    <li>About</li>
+                    <li>Contact</li>
+                </ul>
             </nav>
         </header>
     )
@@ -187,4 +182,47 @@ function Page() {
 }
 
 ReactDOM.render(<Page />, document.getElementById("root"))
+
+-----------------------css----------------------------------
+
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-items {
+    list-style: none;
+    display: flex;
+}
+
+.nav-items > li {
+    padding: 10px;
+}
+
+.image{
+    width:60px;
+}
+
+
+------------------------------------------------------------------------
+ALWAYS START WITH A CAPITAL LETTER MOVE IT TO ITS NEW FILE
+
+WE HAVE TO IMPORT REACT FROM REACT
+import React from "react"
+export default function Header() {
+    return (
+        <header>
+            <nav>
+                <img src="./react-logo.png" width="40px" class="image" />
+                <ul className="nav-items">
+                    <li>Pricing</li>
+                    <li>About</li>
+                    <li>Contact</li>
+                </ul>
+            </nav>
+        </header>
+    )
+}
 
