@@ -1,0 +1,131 @@
+
+-----------------------------------------
+import React from "react"
+import ReactDOM from "react-dom"
+import Navbar from "./components/Navbar"
+import Main from "./components/Main"
+
+--------------------------------------------------------
+import React from "react"
+
+export default function Main() {
+    return (
+        <main>
+            <h1 className="main--title">Fun facts about React</h1>
+            <ul className="main--facts">
+                <li>Was first released in 2013</li>
+                <li>Was originally created by Jordan Walke</li>
+                <li>Has well over 100K stars on GitHub</li>
+                <li>Is maintained by Facebook</li>
+                <li>Powers thousands of enterprise apps, including mobile apps</li>
+            </ul>
+        </main>
+    )
+}
+-------------------------------------------------------------
+import React from "react"
+
+export default function Navbar() {
+    return (
+        <nav>
+            <img src="../images/react-icon-small.png" className="nav--icon" />
+            <h3 className="nav--logo_text">ReactFacts</h3>
+            <h4 className="nav--title">React Course - Project 1</h4>
+        </nav>
+    )
+}
+--------------------------------------------------------
+import React from "react"
+import Navbar from "./components/Navbar"
+import Main from "./components/Main"
+
+export default function App() {
+    return (
+        <div className="container">
+            <Navbar />
+            <Main />
+        </div>
+    )
+}
+---------------------------------------------------------
+import React from "react"
+import ReactDOM from "react-dom"
+import App from "./App"
+
+ReactDOM.render(<App />, document.getElementById("root"))
+
+
+CSS--------------------------------------------------------
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Inter, sans-serif;
+    height: 100vh;
+    background-color: #282D35;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    background-color: #21222A;
+    height: 90px;
+    padding: 30px 25px;
+}
+
+.nav--logo_text, .nav--title {
+    margin: 0;
+}
+
+.nav--logo_text {
+    margin-right: auto;
+    color: #61DAFB;
+    font-weight: 700;
+    font-size: 22px;
+}
+
+.nav--title {
+    color: #DEEBF8;
+    font-weight: 600;
+}
+
+.nav--icon {
+    height: 30px;
+    margin-right: 7px;
+}
+
+main {
+    padding: 57px 27px;
+    color: white;
+    background-image: url("../images/react-icon-large.png");
+    background-repeat:no-repeat;
+    background-position: 100%;
+    /*
+    background-position-x: right;
+    background-position-y: center;
+    */
+}
+
+.main--title {
+    margin: 0;
+    font-size: 39px;
+    letter-spacing: -0.05em;
+}
+
+.main--facts {
+    margin-top: 46px;
+    max-width: 400px;
+}
+
+.main--facts > li {
+    line-height: 19px;
+    padding-block: 10px;
+}
+/*turning bullet sblue*/
+.main--facts > li::marker{
+  font-size:1.4rem;
+   color: #61DAFB;
+}
